@@ -12,6 +12,20 @@ app.controller("registerComplaintCtrl", function ($scope, $http, toastr, $locati
     }
 });
 
+
+app.controller("registerUnitCtrl", function ($scope, $http, toastr, $location) {
+
+    $scope.registerUnit = function (unit) {
+        $http.post("http://localhost:5000/SpringBootRestApi/api/unit/", JSON.stringify(unit))
+            .then(function success(response) {
+                toastr.success("Unidade criada com sucesso!");
+            }, function error(error) {
+                console.log(error);
+                toastr.error("Problemas ao tentar adicionar queixa.");
+            });
+    }
+});
+
 app.controller("searchAverangeCtrl", function ($scope, $http) {
 
     $scope.average = null;
@@ -102,3 +116,21 @@ app.controller("messageCreatedComplaintCtrl", function ($scope, $routeParams) {
 
     showMessage();
 });
+
+app.controller("loginCtrl", function ($scope) {
+});
+
+// app.controller("registerUnitCtrl", function ($scope, $http, toastr, $location) {
+//
+//     $scope.registerUnit = function (unit) {
+//         $http.post("http://localhost:5000/SpringBootRestApi/api/unit/", JSON.stringify(unit))
+//             .then(function success(response) {
+//                 toastr.success("Unidade criada com sucesso!");
+//                 $location.path('/createdUnit/' + response.data.nome);
+//             }, function error(error) {
+//                 console.log(error);
+//                 toastr.error("Falha ao criar unidade de saude");
+//             });
+//     }
+// });
+
