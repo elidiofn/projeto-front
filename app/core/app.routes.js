@@ -4,6 +4,12 @@ app.config(function ($routeProvider) {
     }).when("/complaint/register", {
         templateUrl: "view/registerComplaint.html",
         controller : "registerComplaintCtrl",
+    }).when("/registerFoodComplaint", {
+        templateUrl: "view/registerFoodComplaint.html",
+        controller : "registerFoodComplaintCtrl",
+    }).when("/registerAnimalComplaint", {
+        templateUrl: "view/registerAnimalComplaint.html",
+        controller : "registerAnimalComplaintCtrl",
     }).when("/searchcomplaint", {
         templateUrl : "view/search_complaint.html",
         controller: "searchComplaintCtrl"
