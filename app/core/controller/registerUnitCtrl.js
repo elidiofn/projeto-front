@@ -7,7 +7,7 @@ app.controller("registerUnitCtrl", function ($scope, $http, toastr, $location) {
                 toastr.success("Unidade criada com sucesso!");
             }, function error(error) {
                 console.log(error);
-                toastr.error("Problemas ao tentar adicionar queixa.");
+                toastr.error("Problemas ao tentar adicionar unidade de saúde.");
             });
     }
 });
