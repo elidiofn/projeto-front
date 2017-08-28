@@ -3,9 +3,14 @@ app.config(function ($routeProvider) {
         templateUrl: "view/search.html"
     }).when("/complaint/register", {
         templateUrl: "view/registerComplaint.html",
+    }).when("/admArea", {
+        templateUrl: "indexAdm.html",
     }).when("/registerFoodComplaint", {
         templateUrl: "view/registerFoodComplaint.html",
         controller : "registerFoodComplaintCtrl",
+    }).when("/townHall/edit", {
+        templateUrl: "view/townHallSituation.html",
+        controller : "townHallSituationCtrl"
     }).when("/registerAnimalComplaint", {
         templateUrl: "view/registerAnimalComplaint.html",
         controller : "registerAnimalComplaintCtrl",
