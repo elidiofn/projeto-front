@@ -17,10 +17,11 @@
 <div class="container">
     <div class="row-fluid">
         <div class="col-lg-12">
-            <ul class="list-group">
-                <div class="list-group-item row" ng-repeat="unit in units">
-                    <div class="col-lg-12">
+            <div class="row" ng-if="unit">
+                <div class="col-lg-12">
+                    <h2 class="text-info">Nome: {{unit.nome}}</h2>
                         <h2 class="text-info">Unidade do Bairro: {{unit.bairro}}</h2>
+                        <p>Localização: {{unit.rua}}</p>
                         <p>Código: {{unit.codigo}}</p>
                         <p>Tipo: {{unit.type}}</p>
                         <p>Número de medicos: {{unit.numeroMedicos}}</p>
