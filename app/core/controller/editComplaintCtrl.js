@@ -19,7 +19,4 @@ app.controller("editComplaintCtrl", function ($scope, $http, toastr, $location) 
                 console.log("Problemas ao tentar editar queixa.");
             });
     }
-
-
-
 });
